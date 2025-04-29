@@ -1,104 +1,104 @@
-# TR5-Simulator - 5-Trade Strategy Simulation App
+TR5-Simulator - 5-Trade Strategy Simulation App
+TR5-Simulator is a professional trading strategy simulator designed to model a 5-trade-per-day system with dynamic risk management and equity curve analysis.
+Built with Streamlit, it enables traders to intuitively understand the effects of Winrate, Risk/Reward ratios, and daily risk exposure through interactive simulations.
 
-**TR5-Simulator** is a trading strategy simulator that models a 5-trade-per-day system with dynamic risk management and equity curve analysis. Built with **Streamlit**, the application allows traders to understand the effects of winrate, risk/reward ratios, and daily risk exposure over time through interactive simulations.
+Users can either run the provided standalone executable or run the Python source code directly.
 
-Users can either run the standalone executable provided, or developers can run the Python source code directly.
+✨ Key Features
+Simulate 5 consecutive trades daily with progressive risk scaling
 
----
+Customize simulation parameters:
 
-## ✨ Key Features
+Winrate (0.1 to 0.9)
 
-- Simulate 5 consecutive trades daily with progressive risk scaling
-- Customize:
-  - Winrate (0.1 to 0.9)
-  - Risk:Reward ratio (1.0 to 5.0)
-  - Total daily risk percentage
-  - Number of trading days
-  - Number of simulation runs
-- Visualize:
-  - Equity Curve progression
-  - Maximum Drawdown distribution
-- Calculate expectancy, average drawdowns, and risk probabilities
-- Built-in real-time server stop/reconnect functionality for smoother usage
+Risk:Reward ratio (1.0 to 5.0)
 
----
+Total daily risk percentage
 
-## 🚀 How to Use
+Number of trading days
 
-### For Regular Users
+Number of simulation runs
 
-_No Python installation is required._
+Visualize results:
 
-1. Download the executable from the `dist/` folder (`run_app.exe`).
-2. Double-click `run_app.exe` to launch the TR5-Simulator.
-3. The app will open automatically in your default browser (typically at `http://localhost:8501`).
+Equity Curve progression
 
-> 📌 **Note:** If Windows Defender SmartScreen appears, click **"More Info" → "Run Anyway"** to proceed.
+Maximum Drawdown distribution
 
-### For Developers
+Calculate:
 
-If you prefer running from the source code or modifying it, follow these steps:
+Expectancy per trade
 
-#### Prerequisites
+Average maximum drawdown
 
-- Python 3.8+
-- pip package manager
+Probability of exceeding 20% drawdown
 
-#### Install dependencies
+Built-in real-time server stop/reconnect functionality
 
-```bash
+🚀 How to Use
+For Regular Users
+No Python installation is required.
+
+Download the executable file from the dist/ folder (run_app.exe).
+
+Double-click on run_app.exe to start the simulator.
+
+The app will automatically open in your default browser (typically at http://localhost:8501).
+
+📌 Note: If Windows Defender SmartScreen appears, click More Info → Run Anyway to proceed.
+
+For Developers
+If you want to run the source code manually:
+
+Prerequisites
+Python 3.8+
+
+pip package manager
+
+Installation
+bash
+Sao chép
+Chỉnh sửa
 pip install -r requirements.txt
-```
-
-#### Run the app locally
-
-```bash
+Running the app
+bash
+Sao chép
+Chỉnh sửa
 streamlit run mo_phong_dashboard_chien_luoc.py
-```
+The application will open automatically at http://localhost:8501.
 
-The app will open at `http://localhost:8501` by default.
+🧠 Simulation Logic Overview
+Each day consists of 5 progressive trades.
 
----
+Dynamic risk adjustment after each trade outcome.
 
-## 🧠 Simulation Logic Overview
+Profits and losses modify the next risk exposure.
 
-- Each day consists of 5 progressive trades.
-- Risk management adjusts after every trade based on the result.
-- Profit/loss directly affects the next trade's risk exposure.
-- The app tracks the equity curve and maximum drawdowns across multiple simulation runs to provide comprehensive performance statistics.
+The system records Equity Curve and Maximum Drawdown statistics across multiple simulation runs.
 
----
-
-## 📁 Project Structure
-
-```
+📁 Project Structure
+pgsql
+Sao chép
+Chỉnh sửa
 TR5-Simulator/
-├── build/                              → Temporary build artifacts (auto-generated)
-├── dist/run_app.exe                   → Standalone executable for users
-├── mo_phong_dashboard_chien_luoc.py  → Main Streamlit app source code
-├── run_app.py                         → Alternative entry point (optional)
-├── run_app.spec                       → PyInstaller configuration file
-├── requirements.txt                   → List of Python dependencies
-└── readme.txt                         → Draft project description (legacy)
-```
+├── build/                     → Temporary build artifacts
+├── dist/run_app.exe            → Standalone executable
+├── mo_phong_dashboard_chien_luoc.py → Main Streamlit application
+├── run_app.py                  → Alternative entry point (optional)
+├── run_app.spec                → PyInstaller configuration file
+├── requirements.txt            → Python dependency list
+└── readme.txt                  → Legacy description draft
+🛠 Deployment Options
+Local deployment via Python & Streamlit
 
----
+Executable .exe distribution (via PyInstaller)
 
-## 🛠 Deployment Options
+Optional: Deploy to cloud platforms (Streamlit Cloud, AWS)
 
-- Run locally using Python/Streamlit
-- Distribute via executable `.exe` (with PyInstaller)
-- Optional: Deploy on Streamlit Cloud (requires minor path/config adjustments)
+🌟 Acknowledgements
+Developed as part of a trading strategy research and educational project.
+Special thanks to all contributors for simulation modeling, UI design, and testing efforts.
 
----
-
-## 🌟 Acknowledgements
-
-Developed as part of a trading strategy research and educational project. Special thanks to the team for contributions in simulation design, logic modeling, and UI optimization.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for full details.
-
+📄 License
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
