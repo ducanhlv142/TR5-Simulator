@@ -27,7 +27,7 @@ Users can either run the standalone executable provided, or developers can run t
 
 ### For Regular Users
 
-No Python installation is required.
+_No Python installation is required._
 
 1. Download the executable from the `dist/` folder (`run_app.exe`).
 2. Double-click `run_app.exe` to launch the TR5-Simulator.
@@ -35,12 +35,12 @@ No Python installation is required.
 
 > 📌 **Note:** If Windows Defender SmartScreen appears, click **"More Info" → "Run Anyway"** to proceed.
 
-
 ### For Developers
 
 If you prefer running from the source code or modifying it, follow these steps:
 
 #### Prerequisites
+
 - Python 3.8+
 - pip package manager
 
@@ -73,31 +73,32 @@ The app will open at `http://localhost:8501` by default.
 
 ```
 TR5-Simulator/
-├── build/                    → Temporary build artifacts (auto-generated)
-├── dist/run_app.exe           → Standalone executable for users
-├── mo_phong_dashboard_chien_luoc.py → Main Streamlit app source code
-├── run_app.py                 → Alternative entry point (optional)
-├── run_app.spec               → PyInstaller configuration file
-├── requirements.txt           → List of Python dependencies
-└── readme.txt                 → Draft project description (legacy)
+├── build/                              → Temporary build artifacts (auto-generated)
+├── dist/run_app.exe                   → Standalone executable for users
+├── mo_phong_dashboard_chien_luoc.py  → Main Streamlit app source code
+├── run_app.py                         → Alternative entry point (optional)
+├── run_app.spec                       → PyInstaller configuration file
+├── requirements.txt                   → List of Python dependencies
+└── readme.txt                         → Draft project description (legacy)
 ```
 
 ---
 
-## 🛠 Deployment
+## 🛠 Deployment Options
 
-- Local execution (via Streamlit)
-- Standalone executable (via PyInstaller)
-- Optional cloud deployment (e.g., Streamlit Cloud, AWS, etc.) with minor adjustments
+- Run locally using Python/Streamlit
+- Distribute via executable `.exe` (with PyInstaller)
+- Optional: Deploy on Streamlit Cloud (requires minor path/config adjustments)
 
 ---
 
 ## 🌟 Acknowledgements
 
-Developed as part of a trading strategy research project. Thanks to the development team for contributions in simulation logic design, testing, and optimization.
+Developed as part of a trading strategy research and educational project. Special thanks to the team for contributions in simulation design, logic modeling, and UI optimization.
 
 ---
 
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for full details.
+
